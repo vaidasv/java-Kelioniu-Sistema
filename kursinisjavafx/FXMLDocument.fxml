@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kursinisjavafx.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Keliones">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6705685618729097" layoutX="7.0" prefHeight="373.0" prefWidth="601.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TableView fx:id="kelioniuTable" layoutX="39.0" layoutY="6.0" prefHeight="369.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="kelionesKodas" prefWidth="103.0" resizable="false" text="ID" />
+                                        <TableColumn fx:id="salis" prefWidth="179.0" resizable="false" text="Šalis" />
+                                          <TableColumn fx:id="keliautojuKiekis" prefWidth="115.0" resizable="false" text="Keliautojų sk." />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="369.0" prefWidth="259.0">
+                                 <children>
+                                    <Button fx:id="pridetiBtn" layoutX="24.0" layoutY="42.0" mnemonicParsing="false" onAction="#pridetiKelione" prefHeight="35.0" prefWidth="147.0" text="Pridėti kelionę" />
+                                    <Button fx:id="pasalintiKelione" layoutX="24.0" layoutY="106.0" mnemonicParsing="false" onAction="#pasalintiKelione" prefHeight="37.0" prefWidth="147.0" text="Ištrinti kelionę" />
+                                    <Label layoutX="14.0" layoutY="164.0" prefHeight="21.0" prefWidth="173.0" text="double click 2 edit Šalis">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Keliautojai">
+               <content>
+                  <SplitPane dividerPositions="0.2803234501347709" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="keliautojuTable" layoutX="-27.0" layoutY="-77.0" prefHeight="101.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="id" prefWidth="86.0" text="ID" />
+                                  <TableColumn fx:id="tipas" prefWidth="105.0" text="Tipas" />
+                                    <TableColumn fx:id="vardas" prefWidth="137.0" text="Vardas/imones Pav" />
+                                    <TableColumn fx:id="pavarde" minWidth="9.0" prefWidth="120.0" text="Pavarde/imones k." />
+                                    <TableColumn fx:id="priskirtaKelione" prefWidth="151.0" text="Priskirtos keliones ID" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4961832061068702" layoutX="181.0" layoutY="-9.0" orientation="VERTICAL" prefHeight="264.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="598.0">
+                                       <children>
+                                          <Button fx:id="pridetiKeliautojaBtn" layoutX="367.0" layoutY="88.0" mnemonicParsing="false" onAction="#pridetiNaujaKeliautoja" prefHeight="23.0" prefWidth="200.0" text="Prideti nauja keliautoja" />
+                                          <Label layoutX="90.0" layoutY="11.0" prefHeight="17.0" prefWidth="43.0" text="Tipas" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="keliautojasBtn" layoutX="77.0" layoutY="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="111.0" selected="true" text="Keliautojas">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="toggleGroup" />
+                                             </toggleGroup></RadioButton>
+                                          <RadioButton fx:id="imoneBtn" layoutX="77.0" layoutY="66.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="103.0" text="Imone" toggleGroup="$toggleGroup" />
+                                          <Button layoutX="299.0" layoutY="88.0" mnemonicParsing="false" onAction="#isvalytiKeliautojoTxtLaukus" text="Išvalyti" />
+                                          <TextField fx:id="vardas_txt" layoutX="188.0" layoutY="50.0" prefHeight="25.0" prefWidth="172.0" promptText="Vardas/Imones pavadinimas" />
+                                          <TextField fx:id="pavarde_txt" layoutX="374.0" layoutY="50.0" prefHeight="25.0" prefWidth="187.0" promptText="Pavarde/Imones kodas" />
+                                          <Button fx:id="trintiKeliautojaBtn" layoutX="463.0" layoutY="9.0" mnemonicParsing="false" onAction="#trintiKeliautoja" text="Trinti keliautoja" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.9949664429530202" layoutX="171.0" layoutY="-15.0" prefHeight="129.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="168.0" prefWidth="617.0">
+                                                   <children>
+                                                      <Label layoutX="226.0" layoutY="24.0" text="Priskirti kelione keliautojui" />
+                                                      <Button layoutX="339.0" layoutY="51.0" mnemonicParsing="false" onAction="#priskirtiKelione" text="Ok" />
+                                                      <TextField fx:id="keliones_id_priskirti_txt" layoutX="232.0" layoutY="51.0" prefHeight="25.0" prefWidth="85.0" promptText="keliones ID" />
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                            </items>
+                                          </SplitPane>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content></Tab>
+            <Tab text="Vartotojai">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="vartotojuTable" prefHeight="302.0" prefWidth="205.0">
+                                <columns>
+                                  <TableColumn fx:id="vartotojoId" prefWidth="75.0" text="Id" />
+                                  <TableColumn fx:id="vartotojoTipas" prefWidth="129.0" text="Tipas" />
+                                </columns>
+                              </TableView>
+                              <SplitPane dividerPositions="0.5" layoutX="205.0" orientation="VERTICAL" prefHeight="371.0" prefWidth="396.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="228.0" prefWidth="394.0">
+                                       <children>
+                                          <Text layoutX="99.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vartotojo kredencialai" wrappingWidth="195.13671875">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <TableView fx:id="keliautojuTablee" layoutX="16.0" layoutY="65.0" prefHeight="63.0" prefWidth="362.0">
+                                            <columns>
+                                              <TableColumn fx:id="idd" prefWidth="43.0" text="id" />
+                                              <TableColumn fx:id="tipass" prefWidth="68.0" text="tipas" />
+                                                <TableColumn fx:id="vardass" prefWidth="82.0" text="vard/im pav" />
+                                                <TableColumn fx:id="pavardee" prefWidth="75.0" text="pav/imo k" />
+                                                <TableColumn fx:id="priskirtaKelionee" prefWidth="107.0" text="kelione" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="356.0">
+                                       <children>
+                                          <Text layoutX="64.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacija apie vartotojo kelione" wrappingWidth="266.13671875">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <TableView fx:id="kelioniuTablee" layoutX="10.0" layoutY="48.0" prefHeight="64.0" prefWidth="374.0">
+                                            <columns>
+                                              <TableColumn fx:id="kelionesKodass" prefWidth="75.0" text="id" />
+                                              <TableColumn fx:id="saliss" prefWidth="157.0" text="salis" />
+                                                <TableColumn fx:id="keliautojuKiekiss" prefWidth="141.0" text="kiekis zmoniu" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <Button layoutX="50.0" layoutY="319.0" mnemonicParsing="false" onAction="#gautiInfo" text="Gauti informacija" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

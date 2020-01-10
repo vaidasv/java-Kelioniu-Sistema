@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="212.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KeliautojasController">
+   <children>
+      <SplitPane dividerPositions="0.7095238095238096" layoutX="125.0" layoutY="-22.0" orientation="VERTICAL" prefHeight="212.0" prefWidth="602.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="kKodasTxtField" layoutX="146.0" layoutY="19.0" />
+                  <Label layoutX="14.0" layoutY="21.0" text="Keliones Kodas:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="62.0" text="Salis:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="109.0" prefHeight="22.0" prefWidth="74.0" text="Data nuo:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="357.0" layoutY="21.0" text="Data iki:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="309.0" layoutY="62.0" text="Apgyvendinimas:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="310.0" layoutY="109.0" text="Transporto tipas:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="617.0" layoutY="22.0" text="Kaina:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="kSalisTxtField" layoutX="146.0" layoutY="60.0" />
+                  <TextField fx:id="kDataNuoTxtField" layoutX="146.0" layoutY="107.0" />
+                  <TextField fx:id="kDataIkiTxtField" layoutX="447.0" layoutY="20.0" />
+                  <TextField fx:id="kApgyvendinimasTxtField" layoutX="447.0" layoutY="60.0" />
+                  <TextField fx:id="kTransportoTipasTxtField" layoutX="447.0" layoutY="108.0" />
+                  <TextField fx:id="kKainaTxtField" layoutX="681.0" layoutY="19.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="patvirtintiNaujaKelioneButton" layoutX="165.0" layoutY="16.0" mnemonicParsing="false" onAction="#patvirtintiNaujaKelione" prefHeight="26.0" prefWidth="204.0" text="Patvirtinti" />
+                  <Button fx:id="uzdarytiButton" layoutX="466.0" layoutY="16.0" mnemonicParsing="false" onAction="#uzdarytiLanga" prefHeight="26.0" prefWidth="204.0" text="Atsaukti" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
